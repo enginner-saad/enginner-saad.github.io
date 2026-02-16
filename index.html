@@ -29,6 +29,18 @@
                             400: '#60a5fa',
                             500: '#3b82f6', 
                             600: '#2563eb',
+                        },
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        },
+                        silver: {
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                        },
+                        bronze: {
+                            400: '#fb923c', 
+                            500: '#f97316',
                         }
                     },
                 }
@@ -89,7 +101,7 @@
             transition: opacity 0.2s ease-out, transform 0.2s ease-out;
         }
 
-        /* Custom Scrollbar for Certification Area */
+        /* Custom Scrollbar */
         .custom-scrollbar::-webkit-scrollbar {
             width: 6px;
         }
@@ -144,10 +156,10 @@
 
     <main class="container mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-12">
 
-        <section id="hero" class="min-h-[auto] md:min-h-[80vh] flex flex-col md:flex-row items-center justify-center md:justify-between gap-10 md:gap-12 mb-16 md:mb-20">
+        <section id="hero" class="min-h-[auto] md:min-h-[80vh] flex flex-col md:flex-row items-center gap-10 md:gap-12 mb-16 md:mb-20">
             
-            <div class="md:w-1/2 flex justify-center md:justify-start relative mt-8 md:mt-0 order-1 md:order-1">
-                <div class="absolute w-56 h-56 sm:w-72 sm:h-72 bg-royal-500/20 rounded-full blur-3xl -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-10 md:left-10 md:transform-none"></div>
+            <div class="md:w-1/2 flex justify-center relative mt-8 md:mt-0 order-1">
+                <div class="absolute w-56 h-56 sm:w-72 sm:h-72 bg-royal-500/20 rounded-full blur-3xl -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
                 <div class="relative">
                     <div class="relative rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 bg-slate-800 border-4 border-navy-800 ring-4 ring-royal-500/50 shadow-2xl flex items-center justify-center overflow-hidden">
                         <img src="public/Saad.png.jpeg" alt="Muhammad Saad" class="w-full h-full object-cover">
@@ -155,7 +167,7 @@
                 </div>
             </div>
 
-            <div class="md:w-1/2 text-center md:text-left space-y-5 sm:space-y-6 order-2 md:order-2">
+            <div class="md:w-1/2 text-center md:text-left space-y-5 sm:space-y-6 order-2">
                 <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white tracking-tight leading-tight whitespace-nowrap">
                     Muhammad Saad
                 </h1>
@@ -386,29 +398,68 @@
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                         
+                        <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-20 transition">
+                                <svg class="w-16 h-16 text-royal-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <h4 class="font-bold text-royal-400 mb-1">Automated Conveyor Belt System</h4>
+                            <p class="text-sm text-slate-300 mb-4">Designed for efficient material transport and automation.</p>
+                            
+                            <div class="mb-4 space-y-1">
+                                <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-silver-300">
+                                    <span class="text-lg">🏆</span> 2nd Place - University Level <span class="text-slate-500">(ICAT 2025)</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gold-400">
+                                    <span class="text-lg">🥇</span> 1st Place - Department Level <span class="text-slate-500">(ICAT 2025)</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openProjectModal('conveyor')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                View Gallery
+                            </button>
+                        </div>
+
+                        <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-2 opacity-10 group-hover:opacity-20 transition">
+                                <svg class="w-16 h-16 text-royal-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <h4 class="font-bold text-royal-400 mb-1">Solar Powered Grass Cutter</h4>
+                            <p class="text-sm text-slate-300 mb-4">Eco-friendly solution for lawn maintenance using solar energy.</p>
+                            
+                            <div class="mb-4">
+                                <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-bronze-400">
+                                    <span class="text-lg">🥉</span> 3rd Place - Department Level <span class="text-slate-500">(ICAT 2024)</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openProjectModal('grassCutter')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                View Gallery
+                            </button>
+                        </div>
+
                         <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
                             <h4 class="font-bold text-royal-400 mb-1">Autonomous Seed Sowing Machine (AGROBOT)</h4>
-                            <p class="text-sm text-slate-300"><span class="bg-emerald-500/20 text-emerald-400 text-xs px-2 py-0.5 rounded mr-2">FYDP</span> In Progress</p>
-                        </div>
-
-                        <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
-                            <h4 class="font-bold text-royal-400 mb-1">Automated Conveyor Belt System</h4>
-                            <p class="text-sm text-slate-300">Designed for efficient material transport and automation.</p>
-                        </div>
-
-                        <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
-                            <h4 class="font-bold text-royal-400 mb-1">Solar Powered Grass Cutter</h4>
-                            <p class="text-sm text-slate-300">Eco-friendly solution for lawn maintenance using solar energy.</p>
+                            <p class="text-sm text-slate-300 mb-4"><span class="bg-emerald-500/20 text-emerald-400 text-xs px-2 py-0.5 rounded mr-2">FYDP</span> In Progress</p>
                         </div>
 
                         <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
                             <h4 class="font-bold text-royal-400 mb-1">Automated Car Jack</h4>
-                            <p class="text-sm text-slate-300">Motorized gear mechanism for effortless vehicle lifting.</p>
+                            <p class="text-sm text-slate-300 mb-4">Motorized gear mechanism for effortless vehicle lifting.</p>
+                            <button onclick="openProjectModal('carJack')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                View Gallery
+                            </button>
                         </div>
 
                         <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
                             <h4 class="font-bold text-royal-400 mb-1">Automated Streetlights</h4>
-                            <p class="text-sm text-slate-300">Smart lighting system for energy conservation.</p>
+                            <p class="text-sm text-slate-300 mb-4">Smart lighting system for energy conservation.</p>
+                            <button onclick="openProjectModal('streetlights')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                                View Gallery
+                            </button>
                         </div>
 
                         <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
@@ -424,6 +475,10 @@
                     <p class="text-center text-xs sm:text-sm text-slate-400 mb-6 italic">(Click to view certificates)</p>
                     
                     <div class="flex flex-wrap justify-center gap-2 sm:gap-3 max-h-80 overflow-y-auto custom-scrollbar p-2">
+                        
+                        <button onclick="openModal('public/certifications/Agile Project Management.jpg')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-slate-200 bg-white/5 border border-white/10 rounded-full hover:border-royal-500 hover:text-white hover:bg-royal-600 transition duration-200">Agile Project Management</button>
+
+                        <button onclick="openModal('public/certifications/Solidworks Essesntials.jpg')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-slate-200 bg-white/5 border border-white/10 rounded-full hover:border-royal-500 hover:text-white hover:bg-royal-600 transition duration-200">Solidworks Essentials</button>
                         
                         <button onclick="openModal('public/certifications/3d printing.jpg')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-slate-200 bg-white/5 border border-white/10 rounded-full hover:border-royal-500 hover:text-white hover:bg-royal-600 transition duration-200">3D Printing Capstone</button>
                         
@@ -510,17 +565,102 @@
     </main>
 
     <div id="image-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 hidden backdrop-blur-sm p-4 opacity-0" onclick="closeModal()">
-        <div class="relative max-w-5xl max-h-[90vh] w-full flex items-center justify-center p-2">
-            <img id="modal-img" src="" alt="Certificate" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10">
-            <button onclick="closeModal()" class="absolute -top-12 right-0 sm:top-4 sm:right-4 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition z-50">
+        <div class="relative max-w-5xl w-full max-h-[95vh] overflow-y-auto custom-scrollbar flex flex-col items-center justify-center p-2">
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition z-50">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
+            <div id="modal-content" class="w-full flex flex-col items-center gap-4">
+                <img id="modal-img" src="" alt="Certificate" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10">
+            </div>
         </div>
     </div>
 
     <script>
+        // Project Media Data
+        const projectMedia = {
+            'carJack': [
+                { type: 'image', src: 'public/projects/Car jack-1.jpg' },
+                { type: 'image', src: 'public/projects/Car jack-2.jpg' }
+            ],
+            'conveyor': [
+                { type: 'image', src: 'public/projects/Conveyor- CAD Drawing.png' },
+                { type: 'image', src: 'public/projects/Conveyor- Standee.jpg' },
+                { type: 'image', src: 'public/projects/Conveyor-CAD.png' }
+            ],
+            'streetlights': [
+                { type: 'video', src: 'public/projects/Circuit Testing Video.mp4' },
+                { type: 'image', src: 'public/projects/Streetlights Circuit.jpg' }
+            ],
+            'grassCutter': [
+                { type: 'image', src: 'public/projects/Grass Cutter- Brochure.jpg' },
+                { type: 'image', src: 'public/projects/Grass Cutter- CAD.png' },
+                { type: 'image', src: 'public/projects/Grass Cutter- Drawing Views.png' },
+                { type: 'image', src: 'public/projects/Grass Cutter Group.jpg' },
+                { type: 'image', src: 'public/projects/Grass Cutter.jpg' }
+            ]
+        };
+
+        // Modal Logic
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalContent = document.getElementById('modal-content');
+
+        // Function for Single Image (Certifications)
+        function openModal(src) {
+            modalContent.innerHTML = ''; // Clear previous
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = "max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10";
+            modalContent.appendChild(img);
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.classList.add('no-scroll');
+        }
+
+        // Function for Project Gallery (Multiple Images/Videos)
+        function openProjectModal(projectId) {
+            modalContent.innerHTML = ''; // Clear previous content
+            
+            const mediaList = projectMedia[projectId];
+            
+            if (mediaList) {
+                mediaList.forEach(item => {
+                    if (item.type === 'image') {
+                        const img = document.createElement('img');
+                        img.src = item.src;
+                        img.className = "max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10 mb-4";
+                        modalContent.appendChild(img);
+                    } else if (item.type === 'video') {
+                        const video = document.createElement('video');
+                        video.src = item.src;
+                        video.controls = true;
+                        video.className = "max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-white/10 mb-4";
+                        modalContent.appendChild(video);
+                    }
+                });
+            }
+
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.classList.add('no-scroll');
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalContent.innerHTML = ''; // Clear content on close
+            }, 300);
+            document.body.classList.remove('no-scroll');
+        }
+
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -554,28 +694,6 @@
 
         // Set Year
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Modal Logic
-        const modal = document.getElementById('image-modal');
-        const modalImg = document.getElementById('modal-img');
-
-        function openModal(src) {
-            modalImg.src = src;
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-            }, 10);
-            document.body.classList.add('no-scroll');
-        }
-
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modalImg.src = '';
-            }, 300);
-            document.body.classList.remove('no-scroll');
-        }
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') closeModal();
