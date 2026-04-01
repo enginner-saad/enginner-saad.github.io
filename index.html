@@ -414,7 +414,7 @@
                                 </div>
                             </div>
 
-                            <button onclick="openProjectModal('conveyor')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                            <button onclick="openProjectModal('conveyor')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition relative z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                                 View Gallery
                             </button>
@@ -433,7 +433,7 @@
                                 </div>
                             </div>
 
-                            <button onclick="openProjectModal('grassCutter')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                            <button onclick="openProjectModal('grassCutter')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition relative z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                                 View Gallery
                             </button>
@@ -447,7 +447,7 @@
                         <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
                             <h4 class="font-bold text-royal-400 mb-1">Automated Car Jack</h4>
                             <p class="text-sm text-slate-300 mb-4">Motorized gear mechanism for effortless vehicle lifting.</p>
-                            <button onclick="openProjectModal('carJack')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                            <button onclick="openProjectModal('carJack')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition relative z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                                 View Gallery
                             </button>
@@ -456,7 +456,7 @@
                         <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
                             <h4 class="font-bold text-royal-400 mb-1">Automated Streetlights</h4>
                             <p class="text-sm text-slate-300 mb-4">Energy-efficient streetlights automated via LDR Sensors.</p>
-                            <button onclick="openProjectModal('streetlights')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition">
+                            <button onclick="openProjectModal('streetlights')" class="flex items-center gap-2 text-xs font-semibold text-white bg-royal-600 px-3 py-1.5 rounded hover:bg-royal-500 transition relative z-10">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
                                 View Gallery
                             </button>
@@ -476,6 +476,8 @@
                     
                     <div class="flex flex-wrap justify-center gap-2 sm:gap-3 max-h-80 overflow-y-auto custom-scrollbar p-2">
                         
+                        <button onclick="openModal('public/certifications/3D Swymer.jpg')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-slate-200 bg-white/5 border border-white/10 rounded-full hover:border-royal-500 hover:text-white hover:bg-royal-600 transition duration-200">3DSwymer Associate</button>
+
                         <button onclick="openModal('public/certifications/Agile Project Management.jpg')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-slate-200 bg-white/5 border border-white/10 rounded-full hover:border-royal-500 hover:text-white hover:bg-royal-600 transition duration-200">Agile Project Management</button>
 
                         <button onclick="openModal('public/certifications/Solidworks Essesntials.jpg')" class="px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium text-slate-200 bg-white/5 border border-white/10 rounded-full hover:border-royal-500 hover:text-white hover:bg-royal-600 transition duration-200">Solidworks Essentials</button>
@@ -564,17 +566,29 @@
 
     </main>
 
-    <div id="image-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 hidden backdrop-blur-sm p-4 opacity-0" onclick="closeModal()">
-        <div class="relative max-w-5xl w-full max-h-[95vh] overflow-y-auto custom-scrollbar flex flex-col items-center justify-center p-2">
-            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition z-50">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-            <div id="modal-content" class="w-full flex flex-col items-center gap-4">
-                <img id="modal-img" src="" alt="Certificate" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10">
-            </div>
+    <div id="image-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 hidden backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300" onclick="closeModal()">
+        
+        <button onclick="closeModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 transition z-50">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+
+        <button id="prev-btn" onclick="prevMedia(event)" class="absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white rounded-full p-3 sm:p-4 transition z-50 hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+
+        <button id="next-btn" onclick="nextMedia(event)" class="absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/30 text-white rounded-full p-3 sm:p-4 transition z-50 hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+
+        <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center justify-center p-2" onclick="event.stopPropagation()">
+            <div id="modal-content" class="w-full flex items-center justify-center">
+                </div>
         </div>
+        
+        <div id="media-counter" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white bg-black/60 backdrop-blur px-4 py-1.5 rounded-full text-sm font-medium tracking-widest hidden pointer-events-none">
+            1 / 3
+        </div>
+
     </div>
 
     <script>
@@ -587,7 +601,8 @@
             'conveyor': [
                 { type: 'image', src: 'public/projects/Conveyor- CAD Drawing.png' },
                 { type: 'image', src: 'public/projects/Conveyor- Standee.jpg' },
-                { type: 'image', src: 'public/projects/Conveyor-CAD.png' }
+                { type: 'image', src: 'public/projects/Conveyor-CAD.png' },
+                { type: 'image', src: 'public/certifications/Conveyor Prize.jpeg' }
             ],
             'streetlights': [
                 { type: 'video', src: 'public/projects/Circuit Testing Video.mp4' },
@@ -598,53 +613,96 @@
                 { type: 'image', src: 'public/projects/Grass Cutter- CAD.png' },
                 { type: 'image', src: 'public/projects/Grass Cutter- Drawing Views.png' },
                 { type: 'image', src: 'public/projects/Grass Cutter Group.jpg' },
-                { type: 'image', src: 'public/projects/Grass Cutter.jpg' }
+                { type: 'image', src: 'public/projects/Grass Cutter.jpg' },
+                { type: 'image', src: 'public/certifications/Solar power Prize.jpeg' }
             ]
         };
 
-        // Modal Logic
+        // Modal Variables
         const modal = document.getElementById('image-modal');
-        const modalImg = document.getElementById('modal-img');
         const modalContent = document.getElementById('modal-content');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const mediaCounter = document.getElementById('media-counter');
+
+        let currentMediaArray = [];
+        let currentIndex = 0;
 
         // Function for Single Image (Certifications)
         function openModal(src) {
-            modalContent.innerHTML = ''; // Clear previous
-            const img = document.createElement('img');
-            img.src = src;
-            img.className = "max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10";
-            modalContent.appendChild(img);
+            currentMediaArray = [{ type: 'image', src: src }];
+            currentIndex = 0;
             
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-            }, 10);
-            document.body.classList.add('no-scroll');
+            updateModalDisplay();
+            
+            // Hide navigation for single images
+            prevBtn.classList.add('hidden');
+            nextBtn.classList.add('hidden');
+            mediaCounter.classList.add('hidden');
+            
+            showModal();
         }
 
         // Function for Project Gallery (Multiple Images/Videos)
         function openProjectModal(projectId) {
-            modalContent.innerHTML = ''; // Clear previous content
+            if (projectMedia[projectId] && projectMedia[projectId].length > 0) {
+                currentMediaArray = projectMedia[projectId];
+                currentIndex = 0;
+                
+                updateModalDisplay();
+                
+                if (currentMediaArray.length > 1) {
+                    prevBtn.classList.remove('hidden');
+                    nextBtn.classList.remove('hidden');
+                    mediaCounter.classList.remove('hidden');
+                } else {
+                    prevBtn.classList.add('hidden');
+                    nextBtn.classList.add('hidden');
+                    mediaCounter.classList.add('hidden');
+                }
+                
+                showModal();
+            }
+        }
+
+        // Core rendering function
+        function updateModalDisplay() {
+            modalContent.innerHTML = ''; 
+            const item = currentMediaArray[currentIndex];
             
-            const mediaList = projectMedia[projectId];
-            
-            if (mediaList) {
-                mediaList.forEach(item => {
-                    if (item.type === 'image') {
-                        const img = document.createElement('img');
-                        img.src = item.src;
-                        img.className = "max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10 mb-4";
-                        modalContent.appendChild(img);
-                    } else if (item.type === 'video') {
-                        const video = document.createElement('video');
-                        video.src = item.src;
-                        video.controls = true;
-                        video.className = "max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-white/10 mb-4";
-                        modalContent.appendChild(video);
-                    }
-                });
+            if (item.type === 'image') {
+                const img = document.createElement('img');
+                img.src = item.src;
+                img.className = "max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10";
+                modalContent.appendChild(img);
+            } else if (item.type === 'video') {
+                const video = document.createElement('video');
+                video.src = item.src;
+                video.controls = true;
+                video.autoplay = true;
+                video.className = "max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-white/10 bg-black";
+                modalContent.appendChild(video);
             }
 
+            if (currentMediaArray.length > 1) {
+                mediaCounter.innerText = `${currentIndex + 1} / ${currentMediaArray.length}`;
+            }
+        }
+
+        // Navigation functions
+        function nextMedia(e) {
+            if(e) e.stopPropagation();
+            currentIndex = (currentIndex + 1) % currentMediaArray.length;
+            updateModalDisplay();
+        }
+
+        function prevMedia(e) {
+            if(e) e.stopPropagation();
+            currentIndex = (currentIndex - 1 + currentMediaArray.length) % currentMediaArray.length;
+            updateModalDisplay();
+        }
+
+        function showModal() {
             modal.classList.remove('hidden');
             setTimeout(() => {
                 modal.classList.remove('opacity-0');
@@ -656,10 +714,23 @@
             modal.classList.add('opacity-0');
             setTimeout(() => {
                 modal.classList.add('hidden');
-                modalContent.innerHTML = ''; // Clear content on close
+                modalContent.innerHTML = ''; // Clear to stop videos playing
             }, 300);
             document.body.classList.remove('no-scroll');
         }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', (e) => {
+            if (!modal.classList.contains('hidden')) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                } else if (e.key === 'ArrowRight' && currentMediaArray.length > 1) {
+                    nextMedia();
+                } else if (e.key === 'ArrowLeft' && currentMediaArray.length > 1) {
+                    prevMedia();
+                }
+            }
+        });
 
         // Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
@@ -694,10 +765,6 @@
 
         // Set Year
         document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
     </script>
 </body>
 </html>
