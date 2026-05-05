@@ -218,6 +218,49 @@
             </div>
             
             <div class="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
+
+                <!-- SOLIDWORKS Experience -->
+                <div class="glass-card p-6 sm:p-8 rounded-2xl shadow-lg hover:border-royal-500/30 transition duration-300">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
+                        <div class="flex items-start gap-4 sm:gap-5 w-full md:w-auto">
+                            <!-- SOLIDWORKS LOGO -->
+                            <div class="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 bg-white rounded-xl shadow-sm border border-slate-100 flex items-center justify-center p-2 overflow-hidden">
+                                <img src="public/SolidWorks-Logo.png" alt="SOLIDWORKS" class="w-full h-full object-contain">
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">SOLIDWORKS</h3>
+                                <p class="text-base sm:text-lg text-royal-400 font-medium">3.5+ Years of Dedicated Experience</p>
+                                <div class="flex flex-wrap gap-2 sm:gap-3 mt-1 text-xs sm:text-sm text-slate-400">
+                                    <span>CSWP & CSWA Certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pl-0 md:pl-20 text-slate-300 text-sm sm:text-base">
+                        <p class="mb-6 text-justify leading-relaxed">
+                            With over 3.5 years of dedicated experience, SOLIDWORKS serves as my primary engine for translating complex engineering concepts into highly accurate, manufacturable designs. Holding both the Certified SOLIDWORKS Design Professional (CSWP) and Associate (CSWA) credentials, my expertise spans advanced 3D CAD modeling, intricate mechanical assemblies, and structural optimization. I have extensively utilized this software to drive the design of major technical projects, including an Autonomous Seed Sowing Machine (AGROBOT) and an Automated Conveyor Belt System. Whether conceptualizing a new mechanism or refining existing geometry, I consistently leverage SOLIDWORKS to ensure precision, efficiency, and real-world viability.
+                        </p>
+                        
+                        <!-- SW Experience Images -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <!-- Left Image (SW1) -->
+                            <div class="md:col-span-1 rounded-lg overflow-hidden border border-white/10 shadow-md">
+                                <img src="public/SW1.png" alt="SOLIDWORKS Stats 1" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Right Image (SW2) -->
+                            <div class="md:col-span-2 rounded-lg overflow-hidden border border-white/10 shadow-md">
+                                <img src="public/SW2.png" alt="SOLIDWORKS Stats 2" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Gallery Button -->
+                        <button onclick="openProjectModal('solidworksGallery')" class="inline-flex items-center gap-2 text-sm sm:text-base font-bold text-royal-400 hover:text-royal-300 transition duration-300 underline underline-offset-4 decoration-royal-500/50 hover:decoration-royal-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                            Click HERE to view my gallery of 3D designs and mechanical models.
+                        </button>
+                    </div>
+                </div>
                 
                 <!-- PAC Kamra Internship -->
                 <div class="glass-card p-6 sm:p-8 rounded-2xl shadow-lg hover:border-royal-500/30 transition duration-300">
@@ -467,7 +510,7 @@
                             <p class="text-sm text-slate-300 mb-4"><span class="bg-emerald-500/20 text-emerald-400 text-xs px-2 py-0.5 rounded mr-2">FYDP</span> In Progress</p>
                         </div>
 
-                        <!-- NEW HVAC PROJECT INSERTED HERE -->
+                        <!-- HVAC PROJECT -->
                         <div class="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-royal-500/20 transition">
                             <h4 class="font-bold text-royal-400 mb-1">Comparative Thermal Load Analysis & HVAC System Selection</h4>
                             <p class="text-sm text-slate-300 mb-4">Data-driven HVAC load analysis using ASHRAE standards and HAP software.</p>
@@ -671,7 +714,8 @@
     <script>
         // Project Media Data
         const projectMedia = {
-            'hvacAnalysis': [], // Placeholder ready for future images/videos
+            'solidworksGallery': [], // Placeholder for new SW gallery
+            'hvacAnalysis': [], 
             'carJack': [
                 { type: 'image', src: 'public/projects/Car jack-1.jpg' },
                 { type: 'image', src: 'public/projects/Car jack-2.jpg' }
