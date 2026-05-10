@@ -216,7 +216,7 @@
             </div>
             
             <div class="space-y-6 sm:space-y-8 max-w-5xl mx-auto">
-
+                
                 <div class="glass-card p-6 sm:p-8 rounded-2xl shadow-lg hover:border-royal-500/30 transition duration-300">
                     <div class="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
                         <div class="flex items-start gap-4 sm:gap-5 w-full md:w-auto">
@@ -702,7 +702,13 @@
                 { type: 'image', src: 'public/projects/solidworks/Project (12).png' },
                 { type: 'image', src: 'public/projects/solidworks/Project (12a).jpg' }
             ],
-            'hvacAnalysis': [], // Placeholder ready for future images/videos
+            'hvacAnalysis': [
+                { type: 'image', src: 'public/projects/2d Room.jpg' },
+                { type: 'image', src: 'public/projects/3D Room.jpg' },
+                { type: 'image', src: 'public/projects/Roof.jpg' },
+                { type: 'pdf', src: 'public/projects/CEP Report.pdf' },
+                { type: 'pdf', src: 'public/projects/HAP Reports.pdf' }
+            ],
             'carJack': [
                 { type: 'image', src: 'public/projects/Car jack-1.jpg' },
                 { type: 'image', src: 'public/projects/Car jack-2.jpg' }
@@ -748,10 +754,18 @@
                 gridContainer.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full mt-12 mb-8'; // mt-12 to avoid close button
                 
                 currentMediaArray.forEach((item, index) => {
-                    const thumb = document.createElement(item.type === 'video' ? 'video' : 'img');
-                    thumb.src = item.src;
-                    thumb.className = 'w-full h-24 sm:h-32 object-cover rounded-lg cursor-pointer hover:scale-105 hover:ring-2 hover:ring-royal-500 transition shadow-lg border border-white/10';
-                    if(item.type === 'video') thumb.muted = true; // don't play videos in thumbnails
+                    let thumb;
+                    if (item.type === 'pdf') {
+                        thumb = document.createElement('div');
+                        thumb.className = 'w-full h-24 sm:h-32 bg-slate-800 text-royal-400 flex flex-col items-center justify-center rounded-lg cursor-pointer hover:scale-105 hover:ring-2 hover:ring-royal-500 transition shadow-lg border border-white/10';
+                        thumb.innerHTML = '<svg class="w-8 h-8 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg><span class="text-xs font-bold px-2 text-center w-full truncate">PDF Doc</span>';
+                    } else {
+                        thumb = document.createElement(item.type === 'video' ? 'video' : 'img');
+                        thumb.src = item.src;
+                        thumb.className = 'w-full h-24 sm:h-32 object-cover rounded-lg cursor-pointer hover:scale-105 hover:ring-2 hover:ring-royal-500 transition shadow-lg border border-white/10 bg-slate-900';
+                        if(item.type === 'video') thumb.muted = true; // don't play videos in thumbnails
+                    }
+                    
                     thumb.onclick = (e) => {
                         e.stopPropagation();
                         openSingleMediaFromGrid(index);
@@ -806,7 +820,7 @@
             showModal();
         }
 
-        // Function for Project Gallery (Multiple Images/Videos)
+        // Function for Project Gallery (Multiple Images/Videos/PDFs)
         function openProjectModal(projectId) {
             currentProjectId = projectId;
             if (projectMedia[projectId] && projectMedia[projectId].length > 0) {
@@ -846,15 +860,20 @@
             if (item.type === 'image') {
                 const img = document.createElement('img');
                 img.src = item.src;
-                img.className = "max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10";
+                img.className = "max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl border border-white/10 mt-10 sm:mt-0"; // add mt for mobile back button
                 modalContent.appendChild(img);
             } else if (item.type === 'video') {
                 const video = document.createElement('video');
                 video.src = item.src;
                 video.controls = true;
                 video.autoplay = true;
-                video.className = "max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-white/10 bg-black";
+                video.className = "max-w-full max-h-[85vh] rounded-lg shadow-2xl border border-white/10 bg-black mt-10 sm:mt-0";
                 modalContent.appendChild(video);
+            } else if (item.type === 'pdf') {
+                const iframe = document.createElement('iframe');
+                iframe.src = item.src;
+                iframe.className = "w-full max-w-5xl h-[85vh] rounded-lg shadow-2xl border border-white/10 bg-white mt-10 sm:mt-0";
+                modalContent.appendChild(iframe);
             }
 
             if (currentMediaArray.length > 1) {
